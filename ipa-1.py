@@ -38,11 +38,7 @@ def savings(gross_pay, tax_rate, expenses):
     after_expenses=str(after_tax-expenses)
     print("The employee's pay is: "+after_expenses)
 
-a=int(input("Enter the gross pay: "))
-b=float(input("Enter tha tax rate: "))
-c=int(input("Enter the expenses: "))
-
-savings(a,b,c)
+savings(500,0.15,68)
 
 
 def material_waste(total_material, material_units, num_jobs, job_consumption):
@@ -83,12 +79,7 @@ def material_waste(total_material, material_units, num_jobs, job_consumption):
     
     print("Remaining material: "+final_waste+material_units)
 
-a=int(input("Enter the total material available: "))
-b=str(input("Enter the unit of the material: "))
-c=int(input("Enter the number of jobs to run: "))
-d=int(input("Enter the amount of material consumed per job: "))
-
-material_waste(a,b,c,d)
+material_waste(150,"kg",5,13)
 
 
 def interest(principal, rate, periods):
@@ -126,11 +117,7 @@ def interest(principal, rate, periods):
 
     print("Return after investment: "+after_interest)
 
-a=int(input("Enter the principal amount: "))
-b=float(input("Enter the interest rate: "))
-c=int(input("Enter the number of periods invested: "))
-
-interest(a,b,c)
+interest(659,0.12,4)
 
 
 def body_mass_index(weight, height):
@@ -167,18 +154,9 @@ def body_mass_index(weight, height):
     # Replace `pass` with your code.
     # Stay within the function. Only use the parameters as input. The function should return your answer.
     weight_kg=weight*0.454
-
-    foot=int(height[0])*0.3048
-    if len(height)==3:
-        inch=int((height[3]))*0.0254
-    else:
-        inch=int(height[3]+height[4])*0.0254
-    height_m=foot+inch
+    height_m=(height[0]*12+height[1])*0.0254
 
     BMI=weight_kg/(height_m**2)
     print(BMI)
 
-a=float(input("Enter your weight in pounds: "))
-b=list(input("Enter your height in feet and inches: "))
-
-body_mass_index(a,b)
+body_mass_index(88,[5,10])
