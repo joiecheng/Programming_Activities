@@ -50,10 +50,7 @@ def shift_letter(letter, shift):
             move=alphabet[alphabet.index(letter)+shift-26]
         return move
 
-a=str(input("Enter a letter: "))
-b=int(input("Number of places to shift: "))
-
-shift_letter(a,b)
+shift_letter("h",5)
 
 
 def caesar_cipher(message, shift):
@@ -95,10 +92,7 @@ def caesar_cipher(message, shift):
                 start=start+move
     return start
 
-a=str(input("Enter a message: "))
-b=int(input("Number of places to shift: "))
-
-caesar_cipher(a,b)
+caesar_cipher("happy",7)
 
 
 def shift_by_letter(letter, letter_shift):
@@ -143,10 +137,7 @@ def shift_by_letter(letter, letter_shift):
             move=alphabet[alphabet.index(letter)+alphabet.index(letter_shift)-26]
         return move
 
-a=str(input("Enter a letter: "))
-b=str(input("Enter another letter: "))
-
-shift_by_letter(a,b)
+shift_by_letter("j","f")
 
 
 def vigenere_cipher(message, key):
@@ -219,10 +210,7 @@ def vigenere_cipher(message, key):
                 new_start=new_start+move
     return new_start
 
-a=str(input("Enter a message: "))
-b=str(input("Enter a keyphrase: "))
-
-vigenere_cipher(a,b)
+vigenere_cipher("seven teen","carat")
 
 
 def scytale_cipher(message, shift):
@@ -303,10 +291,7 @@ def scytale_cipher(message, shift):
 
     return new_start
 
-a=str(input("Enter a message to encrypt: "))
-b=int(input("Number of places to shift: "))
-
-scytale_cipher(a,b)
+scytale_cipher("happy_birthday",5)
 
 
 def scytale_decipher(message, shift):
@@ -348,7 +333,4 @@ def scytale_decipher(message, shift):
     
     return old_start
 
-a=str(input("Enter a message to decrypt: "))
-b=int(input("Number of places to shift: "))
-
-scytale_decipher(a,b)
+scytale_decipher("HPBTAAYIHYP_RD_",5)
