@@ -36,7 +36,7 @@ def savings(gross_pay, tax_rate, expenses):
 
     after_tax=(gross_pay*(1-tax_rate))//1
     after_expenses=str(after_tax-expenses)
-    print("The employee's pay is: "+after_expenses)
+    return(after_expenses)
 
 savings(500,0.15,68)
 
@@ -77,7 +77,7 @@ def material_waste(total_material, material_units, num_jobs, job_consumption):
     waste=num_jobs*job_consumption
     final_waste=str(total_material-waste)
     
-    print("Remaining material: "+final_waste+material_units)
+    return(final_waste+material_units)
 
 material_waste(150,"kg",5,13)
 
@@ -115,7 +115,7 @@ def interest(principal, rate, periods):
 
     after_interest=math.floor(principal+(principal*rate*periods))
 
-    print("Return after investment: "+after_interest)
+    return(after_interest)
 
 interest(659,0.12,4)
 
@@ -157,6 +157,6 @@ def body_mass_index(weight, height):
     height_m=(height[0]*12+height[1])*0.0254
 
     BMI=weight_kg/(height_m**2)
-    print(BMI)
+    return(BMI)
 
 body_mass_index(88,[5,10])
