@@ -44,10 +44,7 @@ def shift_letter(letter, shift):
     if letter==" ":
         return (" ")
     else:
-        if alphabet.index(letter)+shift<=26:
-            move=alphabet[alphabet.index(letter)+shift]
-        else: #wrap beyond Z
-            move=alphabet[alphabet.index(letter)+shift-26]
+        move=alphabet[alphabet.index(letter)+shift-(26*(shift//26+1))]
         return move
 
 shift_letter("h",5)
@@ -84,12 +81,9 @@ def caesar_cipher(message, shift):
             move=" "
             start=start+move
         else:
-            if alphabet.index(letter)+shift<26:
-                move=alphabet[alphabet.index(letter)+shift]
-                start=start+move
-            else: #wrap beyond Z
-                move=alphabet[alphabet.index(letter)+shift-26]
-                start=start+move
+            move=alphabet[alphabet.index(letter)+shift-(26*(shift//26+1))]
+            start=start+move
+
     return start
 
 caesar_cipher("happy",7)
